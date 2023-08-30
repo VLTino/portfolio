@@ -11,6 +11,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('wY-9Ogl1cHspIAKPc');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_re5ngzc', 'template_oh6agzd', this)
+                    .then(function() {
+                        alert('Email terkirim!');
+                        window.location.href = 'index.html';
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <title>VLTino</title>
 </head>
 
@@ -199,18 +223,19 @@
 
 
             <div class="d-flex justify-content-center align-items-center form">
-                <form action="mail.php" method="post">
+                <form action="" method="post" id="contact-form">
+                    <input type="hidden" name="contact_number">
                     <div class="form-group">
                         <label for="Name">Name</label>
-                        <input type="text" name="name" id="Name" placeholder="Fullname" class="form-control"><br>
+                        <input type="text" name="user_name" id="Name" placeholder="Fullname" class="form-control"><br>
                         <label for="Email">Email</label>
-                        <input type="text" name="email" id="Email" placeholder="Email" class="form-control"><br>
+                        <input type="text" name="user_email" id="Email" placeholder="Email" class="form-control"><br>
                         <label for="Message">Message</label><br>
                         <textarea name="message" id="Message" cols="30" rows="10" class="form-control"
                             placeholder="Message"></textarea>
                     </div><br>
                     <div class="btnc">
-                        <button type="submit" class="btn btn-primary">Send Mail</button>
+                        <button type="submit" class="btn btn-primary" value="Send">Send Mail</button>
                     </div>
                 </form>
             </div>
