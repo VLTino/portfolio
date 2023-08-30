@@ -1,0 +1,245 @@
+/* Reset margin dan padding */
+body{
+    overflow-x: hidden;
+}
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style navbar */
+.navbar {
+  top: 0;
+    background-color: rgba(0, 0, 0, 0); /* Latar belakang hitam */
+    width: 100%; /* Lebar 100% */
+    height: 100px; /* Tinggi sesuai kebutuhan Anda */
+    display: flex;
+    justify-content: space-between; /* Membuat "vltino" di sebelah kiri dan menu di sebelah kanan */
+    align-items: center; /* Pusatkan menu secara vertikal */
+    margin-bottom:20px ;
+}
+
+/* Style brand (teks "vltino") */
+.brand {
+    color: white; /* Warna teks putih */
+    margin-left: 20px; /* Jarak dari tepi kiri */
+    font-weight: bold; /* Tekanan huruf tebal */
+}
+
+/* Style teks di tengah */
+.center-text {
+    color: white; /* Warna teks putih */
+    font-weight: bold; /* Tekanan huruf tebal */
+}
+
+/* Style menu items */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px; /* Jarak antara menu */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* Warna teks putih */
+    font-weight: bold; /* Tekanan huruf tebal */
+}
+
+/* Hover effect */
+.navbar a:hover {
+    color: gray; /* Ubah warna teks saat dihover */
+}
+
+.brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+}
+
+.me {
+    height: 600px;
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    font-family: 'Tilt Prism', cursive;
+    font-size: 40px;
+    display: inline-block;
+
+
+    text-align: center;
+
+    user-select: none;
+}
+
+.about {
+    font-size: larger;
+    margin-top: 70px;
+}
+
+.about-page {
+    
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: large;
+    width: 100%;
+    background-color: rgb(15,23,42);
+    margin-top: 90px;
+    height: auto;
+}
+
+.gradient-line {
+    background: linear-gradient(to right, rgb(79, 199, 255), rgb(252,73,11));
+    height: 5px; /* Tinggi garis */
+    width: 100%; /* Lebar garis, sesuaikan dengan kebutuhan Anda */
+  }
+
+.gradient-linesk {
+    background: linear-gradient(to right, cyan, rgb(51,57,60));
+    height: 5px; /* Tinggi garis */
+    width: 100%; /* Lebar garis, sesuaikan dengan kebutuhan Anda */
+  }
+
+.gradient-linepr {
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(3, 217, 255));
+    height: 5px; /* Tinggi garis */
+    width: 30%; /* Lebar garis, sesuaikan dengan kebutuhan Anda */
+  }
+
+  .linepr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.skills {
+    background-color: rgb(9,9,27);
+    padding: 100px 50px;
+    font-size: large;
+}
+
+.project {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: large;
+    background-color: rgb(15,23,42);
+    height: auto;
+    overflow: hidden;
+}
+
+.item-project{
+    height: auto;
+    padding: 0px 300px;
+    margin-bottom: 50px;
+}
+
+.judulpr{
+    margin-bottom: 50px;
+}
+
+.gambarpr {
+    width:auto;
+    height:auto;
+    border-radius: 20px;
+}
+
+.btn-project a {
+    width: auto;
+    background-color: cyan;
+    color: rgb(0, 0, 0);
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.form form {
+    width: 60%;
+}
+
+.form form input {
+    background-color: rgb(209, 209, 209);
+}
+
+.form form textarea {
+    background-color: rgb(209, 209, 209);
+}
+
+.form form label {
+   color: white;
+}
+
+.hdrc {
+    padding-bottom: 50px;
+}
+
+.btnc {
+    text-align: start;
+}
+
+.btnc button {
+    
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color:white;
+    padding: 0px 50px;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+    .item-project {
+        padding: 0px 20px; /* Mengurangi padding horizontal pada item-project */
+    }
+
+    .btn-project a {
+        width: 100%; /* Membuat tombol penuh lebar */
+    }
+
+    /* Mengurangi ukuran font pada layar kecil */
+    .project, .item-project, .judulpr, .btn-project a {
+        font-size: medium;
+    }
+    .form form {
+        width: 90%;
+    }
+
+    footer {
+        font-size: small;
+    }
+}
+
+/* CSS untuk layar berukuran sedang (misalnya, tablet) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .item-project {
+        padding: 0px 50px; /* Menyesuaikan padding horizontal pada item-project */
+    }
+
+    /* Menyesuaikan ukuran font pada layar sedang */
+    .project, .item-project, .judulpr, .btn-project a {
+        font-size: large;
+    }
+}
+
+@media (max-width: 421px) {
+    .navbar {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills {
+        padding: 100px 30px;
+    }
+
+    .about-page {
+        padding: 100px 30px;
+    }
+}
+
