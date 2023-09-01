@@ -65,8 +65,8 @@ body, ul {
 #text1,
 #text2 {
     position: absolute;
-    font-family: 'Tilt Prism', cursive;
-    font-size: 40px;
+    font-family: 'Kalam', cursive;
+    font-size: 50px;
     display: inline-block;
 
 
@@ -191,6 +191,13 @@ footer {
     color:white;
     padding: 0px 50px;
 }
+
+#tsparticles {
+    overflow: hidden;
+}
+
+
+
 
 /* responsive */
 @media (max-width: 767px) {
