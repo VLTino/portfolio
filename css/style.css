@@ -197,7 +197,26 @@ footer {
 }
 
 
+/* Tambahkan tombol WhatsApp di CSS */
+.whatsapp-button {
+    position: fixed;
+    
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    z-index: 9999; /* Agar tombol selalu ada di atas konten lainnya */
+    
+}
 
+.whatsapp-button i {
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(44, 183, 67);
+}
 
 /* responsive */
 @media (max-width: 767px) {
@@ -247,6 +266,11 @@ footer {
 
     .about-page {
         padding: 100px 30px;
+    }
+
+    .whatsapp-button {
+        bottom: 10px; /* Jarak dari bawah */
+        right: 10px; /* Jarak dari kanan */
     }
 }
 
